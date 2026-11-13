@@ -1,0 +1,27 @@
+package com.java1;
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int number = (int)(Math.random()*100);
+        System.out.println(number);
+        int mynumber = 0;
+        do{
+            System.out.println(" enter number: ");
+            mynumber = sc.nextInt();
+            if(number==mynumber){
+                System.out.println("number is correct");
+                break;
+            }
+            else if(mynumber<number){
+                System.out.println("number is too small");
+            }
+            else{
+                System.out.println("number is too big");
+            }
+        }while(mynumber>=0);
+        System.out.println("my number is :");
+        System.out.println(mynumber);
+    }
+}
